@@ -1,0 +1,157 @@
+/* General del header */
+.header-container {
+  background-color: #ffffe6;
+  width: 100%;
+  max-width: 1200px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  z-index: 10000;
+  padding: 5px 2%;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: top 0.3s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo-container {
+  margin-left: 10px;
+}
+
+.logo-shadow {
+  height: 8vw;
+  max-height: 120px;
+}
+
+/* Menú para pantallas grandes */
+.nav-desktop {
+  display: flex; /* Mostrar elementos en línea */
+  gap: 20px;
+}
+
+.nav-desktop a {
+  font-size: 1.2rem;
+  color: #9f2020;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-desktop a:hover {
+
+  color: #1e3a8a !important;
+  border-radius: 5px;
+}
+
+/* Menú para pantallas pequeñas */
+.nav-items {
+  display: none;
+}
+
+.nav-items.active {
+  display: block;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background-color: #ffffe6;
+  width: 50%; /* Ajusta el ancho del menú desplegable */
+  text-align: center;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+  z-index: 99999;
+}
+
+.nav-item {
+  margin: 10px 0;
+}
+
+.nav-item a {
+  font-size: 1.2rem;
+  color: #9f2020;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-item a:hover {
+  background-color: #1e3a8a;
+  color: #ffffe6;
+}
+
+/* Botón del menú hamburguesa (solo se muestra en pantallas pequeñas) */
+.hamburger-menu {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9f2020;
+}
+
+.menu-actions {
+  display: flex; /* Asegura que los elementos estén en línea */
+  align-items: center; /* Centra verticalmente el botón y el menú */
+  justify-content: flex-end; /* Mantiene ambos elementos alineados a la derecha */
+  gap: 10px; /* Espaciado entre el botón "Ordena" y el ícono del menú */
+}
+
+
+/* Botón "Ordena" */
+.order-button {
+  font-size: 1.2rem;
+  background-color: #9f2020;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.order-button:hover {
+  background-color: #1e3a8a;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none; /* Ocultar el menú de escritorio en pantallas pequeñas */
+  }
+
+  .hamburger-menu {
+    display: block; /* Mostrar el botón del menú hamburguesa */
+  }
+
+  .header-container {
+    padding: 5px;
+  }
+
+  .logo-container {
+    margin-left: 10px;
+  }
+
+  .order-button {
+    margin-right: 10px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-shadow {
+    height: 25vw;
+    max-height: 80px;
+  }
+
+  .order-button {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+}

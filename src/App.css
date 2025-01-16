@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 600vh;
+  overflow-x: hidden;
+  font-family: "Roboto Flex", sans-serif; /* Fuente base */
+}
+
+/* Fuentes originales */
+.roboto-flex-regular {
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 400;
+}
+
+.berkshire-swash-regular {
+  font-family: "Berkshire Swash", serif;
+  font-weight: 400;
+}
+
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+}
+
+.tsukimi-rounded-regular {
+  font-family: "Tsukimi Rounded", sans-serif;
+  font-weight: 400;
+}
+
+/* Banderines permanentes */
+#banderines-left, #banderines-right {
+  position: absolute;
+  top: 50px;
+  width: 40%;
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 9999;
+}
+
+#banderines-left {
+  left: -14%;
+  transform: rotate(-30deg);
+}
+
+#banderines-right {
+  right: -14%;
+  transform: rotate(30deg);
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+  #banderines-left, #banderines-right {
+    display: none; /* Ocultar banderines en pantallas pequeñas */
+  }
+}
+
+/* Media Query para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  #banderines-left, #banderines-right {
+    display: none; /* Asegurarse de ocultar los banderines también en pantallas más pequeñas */
+  }
+}
+
+
+/* Dancers con movimiento restaurado */
+.dancer {
+  position: absolute;
+  top: 10px;
+  width: 200px;
+  height: auto;
+  z-index: 1000;
+  animation: slideInOut 10s ease-out infinite; /* Movimiento infinito */
+}
+
+.dancer-left {
+  animation-name: slideInOutLeft;
+  top: -80px;
+}
+
+.dancer-right {
+  animation-name: slideInOutRight;
+  transform: scale(1.2);
+}
+
+@keyframes slideInOutLeft {
+  0% {
+    left: -200px;
+  }
+  50% {
+    left: 50px;
+  }
+  100% {
+    left: -200px;
+  }
+}
+
+@keyframes slideInOutRight {
+  0% {
+    right: -200px;
+  }
+  50% {
+    right: 50px;
+  }
+  100% {
+    right: -200px;
+  }
+}
+
+/* Texto del anuncio */
+.announcement-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  font-family: "Pacifico", cursive;
+  color: red;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  white-space: nowrap;
+}
+
+/* Contenedor de derechos */
+.containerderechos {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 1rem;
+  color: #999;
+  text-align: right;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+/* Responsividad  dancers */
+@media (max-width: 768px) {
+  .dancer {
+    display: none; /* Ocultar bailarines en pantallas pequeñas */
+  }
+
+  .announcement-text {
+    font-size: 2rem; /* Texto del anuncio más pequeño */
+  }
+}
+
+@media (min-width: 1200px) {
+  .dancer {
+    width: 250px; /* Dancers más grandes */
+  }
+
+  .announcement-text {
+    font-size: 3.5rem; /* Texto del anuncio más grande */
+  }
+}

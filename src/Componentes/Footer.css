@@ -1,0 +1,83 @@
+.footer-container {
+  display: flex; /* Activa el modo flex */
+  flex-wrap: wrap; /* Permite que las columnas se apilen si no hay espacio */
+  justify-content: space-around; /* Distribuye las columnas con menos espacio entre ellas */
+  align-items: flex-start; /* Alinea las columnas al inicio */
+  max-width: 50%; /* Ajusta el ancho máximo del contenedor */
+  margin: 40vh auto; /* Centra el contenedor */
+  margin-bottom: 10vh;
+  padding: 20px;
+  gap: 10px; /* Controla el espacio entre columnas (mejor que margin en flexbox) */
+}
+
+.footer-column {
+  flex: 1; /* Las columnas ocupan partes iguales del espacio */
+  max-width: 20%; /* Limita el ancho máximo de cada columna */
+  min-width: 100px; /* Evita que las columnas se reduzcan demasiado */
+}
+
+
+.footer-bg {
+  background-color: none; /* Sin fondo */
+  min-height: 50vh;
+  margin-bottom: 30vh;
+}
+
+.footer-bg h2 {
+  color: #1e3a8a; /* Color de los títulos */
+}
+
+.footer-bg p {
+  color: #000000; /* Color de los párrafos */
+}
+
+.footer-bg ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-bg ul li {
+  margin-bottom: 10px;
+}
+
+.footer-bg ul li a {
+  color: #9f2020; /* Color de los enlaces */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-bg ul li a:hover {
+  color: #ff0000; /* Color al pasar el mouse */
+}
+
+
+.container a:hover {
+  color: #ff0000; /* Color al pasar el mouse */
+}
+
+.logo {
+  max-width: 200px; /* Ajusta el tamaño del logo si es necesario */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+  display: block; /* Asegura que se muestre correctamente */
+}
+
+.mt-4 {
+  font-weight: bold;
+}
+
+
+.terminos-container  p {
+  color: #9f2020;
+}
+
+.terminos-container  a {
+  color: #1e3a8a;
+}
+
+.terminos-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+}

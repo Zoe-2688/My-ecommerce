@@ -1,0 +1,399 @@
+/* Contenedor del menú */
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 5vh auto;
+  
+}
+
+.menu-text-container {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Coloca los elementos en una columna */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  height: 10vh; /* Ajusta la altura del contenedor principal */
+}
+
+.menu-text-container::before,
+.menu-text-container::after {
+  content: "";
+  position: absolute;
+  width: 900px; /* Ajusta el tamaño del patrón según sea necesario */
+  height: 350px;
+  background: url("/public/images/patternretro.png") no-repeat center center;
+  background-size: cover; /* Asegúrate de que el patrón se ajuste correctamente */
+}
+
+.menu-text-container::before {
+  left: -900px; /* Ajusta el espacio a la izquierda del texto */
+}
+
+.menu-text-container::after {
+  right: -900px; /* Ajusta el espacio a la derecha del texto */
+}
+
+.menu-header {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos uno debajo del otro */
+  align-items: center; /* Centra los elementos horizontalmente */
+  position: relative;
+  align-items: center;
+  margin-bottom: -40px; /* Acerca el encabezado al menú */
+  z-index: 2; /* Asegura que el texto esté sobre otros elementos */
+}
+
+.menu-explora {
+  font-size: 6vh; /* Tamaño de fuente para "Explora" */
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0; /* Elimina los márgenes predeterminados */
+  margin-top: -100px; /* Reduce la separación vertical entre "Explora" y "nuestro" */
+  color: #9b2226;
+}
+
+.menu-text {
+  display: flex; /* Necesario para usar flexbox */
+  justify-content: center; /* Centra el texto horizontalmente */
+  align-items: center; /* Centra el texto verticalmente */
+  color: #1e3a8a;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 4rem;
+  z-index: 1; /* Asegura que el texto "Menu" esté debajo de otros elementos */
+  margin-top: -20px; /* Ajusta el espacio con el encabezado */
+  position: relative; /* Necesario para el posicionamiento relativo */
+}
+
+.stars-image {
+  position: absolute;
+}
+
+.stars-image.top-left {
+  top: -140px; /* Ajusta la posición vertical más cerca del texto "Explora" */
+  left: -40px; /* Ajusta la posición horizontal más cerca del texto "Explora" */
+  width: 200px; /* Ajusta el tamaño de las estrellas */
+  height: 100px;
+}
+
+.stars-image.bottom-right {
+  bottom: 90px; /* Ajusta la posición vertical más cerca del texto "Menu" */
+  right: 40px; /* Ajusta la posición horizontal más cerca del texto "Menu" */
+  width: 150px; /* Ajusta el tamaño de las estrellas */
+  height: 80px;
+}
+
+/* Carrusel de categorías */
+
+.carousel-containerCategorias {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  width: 100%;
+  height: 10vh;
+  min-height: 20vh; /* Ajusta según el diseño esperado */
+  margin: 2vh auto; /* Espaciado superior e inferior */
+  overflow: visible;
+}
+
+
+.carousel-container-menu {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  width: 100%;
+  height: auto;
+  min-height: 50vh; /* Ajusta según el diseño esperado */
+  margin: 2vh auto; /* Espaciado superior e inferior */
+  overflow: visible;
+}
+
+
+
+
+.carousel {
+  height: 60vh;
+  justify-content: center; /* Centrado en pantallas grandes */
+  flex-wrap: nowrap;
+  gap: 20px; /* Espacio entre íconos */
+  overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+  flex-grow: 1;
+  align-items: center; /* Alinea verticalmente los íconos y el texto */
+  scrollbar-width: none; /* Oculta scrollbar en navegadores compatibles */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Ocultar scrollbar en navegadores WebKit */
+}
+
+/* Elementos del carrusel de categorías */
+.carousel-item-text {
+  display: flex;
+  align-items: center; /* Alinea íconos y texto horizontalmente */
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Iconos en el carrusel de categorías */
+.category-icon {
+  width: 40px; /* Tamaño del icono */
+  height: 40px;
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+/* Texto en el carrusel de categorías */
+.carousel-item-text span {
+  font-size: 2rem;
+  color: #9b2226;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.carousel-item-text:hover span {
+  transform: scale(1.1);
+  color: #1e3a8a;
+}
+
+/* Elementos del carrusel de menú */
+.carousel-item {
+  display: flex;
+  flex-direction: column; /* Coloca imagen, texto y botón en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: space-between; /* Distribuye el espacio entre elementos */
+  width: 30vh;
+  height: auto; /* Permite que el contenido ajuste su altura */
+  max-height: 100%; /* Asegura que no se corte el contenido */
+  margin: 0 5px; /* Espacio entre los elementos */
+  border: 3px solid #9b2226;
+  border-radius: 15px;
+  background-color:  #fefeef;
+  overflow: hidden; /* Evita que contenido excedente se salga */
+}
+
+/* Imagen de los elementos del menú */
+.item-image {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+  height: auto; /* Ajusta la altura automáticamente */
+  max-height: 40vh; /* Controla la altura máxima de la imagen */
+  object-fit: cover; /* Asegura que la imagen se ajuste bien */
+}
+
+
+/* Título del elemento del menú */
+.item-title {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #9b2226;
+  margin-bottom: 0%;
+  
+}
+
+/* Descripción del elemento del menú */
+.carousel-item-description {
+  margin-top: 5px 0;
+  text-align: center;
+  padding: 0 10px;
+  font-size: 1rem;
+  color: #1e3a8a;
+}
+
+/* Botón del menú */
+.menu-button {
+  margin: 10px 0px;
+  text-align: center;
+  background-color: #9b2226;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu-button:hover {
+  background-color: #1e3a8a;
+}
+
+/* Flechas del carrusel */
+.carousel-arrow {
+  position: absolute;
+  top: 50%; /* Alinea verticalmente con el centro del contenedor */
+  transform: translateY(-50%); /* Ajusta el centro verticalmente */
+  z-index: 10; /* Asegura que las flechas estén por encima del carrusel */
+}
+
+.carousel-arrow.left {
+  left: 350px; /* Ajusta este valor para acercar la flecha al centro */
+}
+
+.carousel-arrow.right {
+  right: 350px; /* Ajusta este valor para acercar la flecha al centro */
+}
+
+/*flechas carousel 2*/
+
+/* Aplica estilos a las imágenes dentro de los botones de flecha */
+.carousel-arrow.left2 img,
+.carousel-arrow.right2 img {
+  width: 30px; /* Ajusta el tamaño de las flechas */
+  height: 60px;
+}
+
+/* Posicionamiento de las flechas (ajusta los valores según sea necesario) */
+.carousel-arrow.left2 {
+  left: 250px; /* Ajusta este valor para acercar la flecha al centro */
+}
+
+.carousel-arrow.right2 {
+  right: 250px; /* Ajusta este valor para acercar la flecha al centro */
+}
+
+
+
+.carousel-arrow img {
+  width: 20px; /* Ajusta el tamaño de las flechas si es necesario */
+  height: 40px;
+}
+
+
+/* Pantallas pequeñas y medianas */
+@media (max-width: 768px) {
+
+  /* General: Carrusel */
+  .menu-container{
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    height: 40vh;
+    margin: 5rem 0;
+  }
+.carousel {
+  height: 60vh;
+  flex-wrap: nowrap;
+  gap: 40px; /* Espacio entre íconos */
+  overflow-x: auto; /* Permite el desplazamiento horizontal si es necesario */
+  flex-grow: 1;
+   /* Alinea verticalmente los íconos y el texto */
+  scrollbar-width: none; /* Oculta scrollbar en navegadores compatibles */
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Ocultar scrollbar en navegadores WebKit */
+}
+  .carousel-container-menu {
+    display: flex;
+    justify-content: flex-start; /* Alinea el carrusel a la izquierda */
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Suaviza desplazamiento táctil */
+    width: 100%; /* Contenedor ocupa todo el ancho */
+    padding: 0 10px; /* Espacio a los lados */
+    box-sizing: border-box; /* Incluir padding en el cálculo del tamaño */
+  }
+
+  .carousel-item {
+    flex: 0 0 100%; /* Un ítem ocupa todo el ancho */
+    scroll-snap-align: center; /* Alinea los ítems al centro */
+  }
+
+  /* Espacio adicional para el primer elemento */
+  .carousel-container-menu .carousel-item:first-child {
+    margin-left: 10%; /* Espacio solo en pantallas pequeñas */
+  }
+}
+
+@media (min-width: 769px) {
+  .carousel-container-menu {
+    display: flex;
+    justify-content: center; /* Centra el carrusel horizontalmente */
+    overflow: hidden; /* Oculta desplazamiento */
+    width: 100%; /* Contenedor ocupa todo el ancho */
+    padding: 0; /* Sin espacio adicional */
+    box-sizing: border-box;
+  }
+
+  .carousel-item {
+    flex: 0 0 auto; /* Mantén el tamaño del contenido */
+    margin: 0 20px; /* Espacio entre elementos */
+    scroll-snap-align: start; /* Comienza cada ítem alineado */
+  }
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 375px) {
+
+  .carousel {
+    height: 30rem; /* Ajustar altura automáticamente */
+    justify-content: flex-start; /* Alinear contenido al inicio */
+    gap: 40px; /* Reducir espacio entre íconos */
+  }
+
+  .menu-carousel{
+    height: 20rem;
+  }
+  .menu-explora {
+    font-size: 4vh; 
+  }
+
+  .menu-text {
+    font-size: 2.5rem; /* Tamaño del texto más pequeño */
+  }
+
+  .carousel-container-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Carrusel alineado a la izquierda */
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    scroll-snap-type: x mandatory; /* Snap para una mejor experiencia */
+    -webkit-overflow-scrolling: touch; /* Suaviza el desplazamiento táctil */
+    height: 40rem;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    padding: 0 ; /* Espacio alrededor del carrusel */
+    box-sizing: border-box;
+  }
+
+  /* Espacio adicional para el primer elemento */
+  .carousel-container-menu .carousel-item:first-child {
+    margin-left: 15%; /* Espacio mayor para el primer ítem */
+    height: 40rem;
+    width: fit-content;
+    
+  }
+
+  .carousel-item {
+    flex: 0 0 35%; /* Cada ítem ocupa todo el ancho */
+    height: 40rem;
+    scroll-snap-align: center; /* Alinea los ítems al centro */
+    justify-content: center; /* Centra los ítems horizontalmente */
+    align-items: center; /* Centra los ítems verticalmente */
+  }
+
+  .carousel-item-text span {
+    font-size: 1.3rem; /* Texto más pequeño */
+  }
+
+  .category-icon {
+    width: 30px; /* Tamaño reducido */
+    height: 30px;
+    margin-right: 5px;
+  }
+
+  .item-image {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+    height: auto; /* Ajusta la altura automáticamente */
+    object-fit: cover; /* Asegura un buen ajuste */
+  }
+
+  .menu-button {
+    padding: 6px 12px; /* Botones más pequeños */
+    font-size: 0.9rem;
+  }
+}
+
+

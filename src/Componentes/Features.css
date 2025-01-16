@@ -1,0 +1,87 @@
+.features {
+  position: relative;
+  min-height: 160vh;
+  margin-bottom: 30vh;
+  margin-top: 30vh;;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Alinea los elementos al principio */
+  padding: 0;
+  overflow: hidden;
+  background-image: url('/public/images/fondo.png'); /* Ruta ajustada para el fondo */
+  background-size: cover; /* Asegúrate de que el fondo cubra todo */
+  background-position: center; /* Centra el fondo */
+  background-repeat: no-repeat; /* Evita que se repita */
+}
+
+.frame-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10vh; /* Espacio debajo del encabezado */
+}
+
+.frame-image {
+  width: 10%;
+  height: auto;
+  min-width: 1000px; /* Controla el tamaño máximo para pantallas grandes */
+  display: block; /* Asegura que se muestre correctamente */
+  margin: 10vh auto; /* Centra la imagen */
+}
+
+.about-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 50vh;
+}
+
+.about-us-content {
+  display: flex;
+  align-items: center;
+  max-width: 1500px;
+  width: 100%;
+}
+
+.about-us-video {
+  width: 200%;
+  height: auto;
+  margin-right: 0;
+  margin-top: -20vh;
+  margin-left: -400px;
+  object-fit: cover;
+}
+
+.about-us-text {
+  width: 60%;
+  margin-left: -300px;
+  margin-bottom: 30vh;
+}
+
+.about-us-text h1 {
+  font-size: 8rem;
+  margin-bottom: -2vh;
+  color: #9b2226;
+  position: relative;
+  left: -20px;  /* Ajusta este valor según necesites */
+}
+
+
+.about-us-text p {
+  font-size: 2.5vh;
+  margin-bottom: 1rem;
+}
+
+.read-more {
+  color: #9b2226;
+  text-decoration: none;
+  font-size: 2vh;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}

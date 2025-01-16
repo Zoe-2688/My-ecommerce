@@ -1,0 +1,341 @@
+/* Estilos base para pantallas grandes */
+.hero {
+  position: relative;
+  height: 50vh;
+  display: flex;
+  align-items: flex-start;
+  padding: 0 2rem;
+  margin-top: 80px;
+}
+
+.hero-container {
+  max-width: 30vw;
+  margin-left: -40%;
+  text-align: left;
+}
+
+.bg-dots {
+  background-image: url('/public/images/hero_v2-pattern.png');
+  background-size: cover;
+  position: absolute;
+  top: 35%;
+  left: 65%;
+  width: 100%;
+  height: 55%;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+.hero-image {
+  max-height: 60vh;
+  margin-left: 45%;
+}
+
+.hero-button {
+  margin-left: 0;
+  top: 5vh;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Cambiar a diseño vertical */
+    height: auto; /* Dejar que crezca dinámicamente */
+    padding: 1rem; /* Reducir el padding */
+    text-align: center; /* Centrar el contenido */
+  }
+
+  .hero-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .hero-ofertas,
+  .hero-heading {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .bg-dots {
+    position: relative;
+    margin: 1rem auto;
+    top: auto;
+    left: auto;
+    width: 50%;
+    height: auto;
+    z-index: 0; /* Asegura que los dots queden detrás */
+  }
+
+  .hero-image {
+    max-height: 30vh;
+    width: auto;
+    margin: 1rem auto;
+    z-index: 10; /* Asegura que la imagen de hamburguesa esté encima de los dots */
+  }
+
+  .hero-paragraph {
+    margin: 1rem auto;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    width: 90%;
+  }
+
+  .hero-button {
+    margin: 1rem auto;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* Ajustar tamaños de texto en dispositivos pequeños */
+  .hero-ofertas {
+    font-size: 3rem; /* Reducir tamaño de h1 en pantallas pequeñas */
+  }
+
+  .hero-heading {
+    font-size: 2rem; /* Reducir tamaño de h2 en pantallas pequeñas */
+  }
+}
+
+/* Media Queries específicas para pantallas muy pequeñas (iPhone SE, 480px o menos) */
+/* Estilos generales para Hero */
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Asegura que los elementos estén alineados en la parte superior */
+  align-items: center;
+  height: 130vh; /* Altura mayor para pantallas grandes */
+  padding: 0 2rem;
+  overflow: hidden;
+  margin: 0; /* Ajusta según el tamaño del header */
+}
+
+/* Fondo de los dots */
+.bg-dots {
+  background-image: url('/public/images/hero_v2-pattern.png');
+  background-size: cover;
+  position: absolute;
+  top: 15%;
+  left: 145%;
+  width: 100%; 
+  height: 55%; 
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.7;
+  transform: translateX(-50%);
+  animation: slideInDots 1.5s ease-out forwards;
+}
+
+/* Animación de entrada de los dots */
+@keyframes slideInDots {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Estilo para la imagen hero */
+.hero img {
+  height: 60vh;
+  margin-left: 5vh;
+  width:100%;
+  transform: translateX(100vw);
+  animation: slideInImage 1.5s ease-out forwards 1s;
+}
+
+/* Animación de entrada de la imagen */
+@keyframes slideInImage {
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Contenedor principal de los textos */
+.hero-container {
+  max-width: 30vw; 
+  height: 60%;
+  width: 100%;
+  padding:1rem;
+  margin-left: -30%;
+  align-content: flex-start;
+  margin-top: 30vh; /* Ajustamos la distancia de separación */
+  position: relative;
+  text-align: left;
+  animation: slideInHero 1.5s ease-out forwards 0.5s;
+}
+
+/* Animación de entrada del contenedor hero */
+@keyframes slideInHero {
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Botón */
+.hero-button {
+  margin-left: 0;
+  text-align: left;
+  top: 5vh;
+  position: relative;
+  left: 1%;
+  transform: translateX(-10%);
+}
+
+/* Media Queries para dispositivos grandes */
+@media (min-width: 1440px) {
+  .hero-container {
+    padding: 1rem;
+  }
+
+  .hero-ofertas {
+    font-size: 6rem;
+  }
+
+  .hero-heading {
+    font-size: 3rem;
+  }
+
+  .hero-container p {
+    font-size: 2.5rem;
+  }
+
+  .hero-button {
+    padding: 1.5rem 3rem;
+    font-size: 1.5rem;
+  }
+
+  .hero img {
+    min-height: 60vh;
+    min-width: 60vh;
+    margin-left: 35vh;
+    margin-top: 5vh;
+  }
+}
+
+/* Media Queries para dispositivos medianos */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 4%;
+  }
+
+  .hero-container {
+    padding: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .hero-ofertas {
+    font-size: 6rem; /* Reduce proporcionalmente */
+  }
+
+  .hero-heading {
+    font-size: 4rem;
+  }
+
+  .hero-container p {
+    font-size: 2rem;
+  }
+
+  .hero-button {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+  }
+
+  .hero img {
+    max-height: 50vh;
+  }
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .bg-dots {
+    width: 40%;
+    height: 30%;
+    top: 10%;
+  }
+
+  .hero img {
+    max-height: 30vh;
+    width:auto
+  }
+
+  .hero-container {
+    padding: 1rem;
+    margin-top: 1rem;
+    max-width: 90vw;
+  }
+
+  .hero-ofertas {
+    font-size: 5rem;
+  }
+
+  .hero-heading {
+    font-size: 3rem;
+  }
+
+  .hero-container p {
+    font-size: 1.75rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero-button {
+      position: relative;
+      top: -0.5rem;
+      margin: 1rem auto;
+    }
+  }
+
+}
+/* Media Queries para dispositivos móviles (480px o menos) */
+@media (max-width: 480px) {
+  .bg-dots {
+    max-height: 30vh;
+    width:auto;
+    margin-top: 7rem;
+  }
+
+  .hero img {
+    max-height: 30vh;
+    width:auto;
+    margin-top: 7rem;
+  }
+
+  .hero-container {
+    padding: 2rem;
+    max-width: 150vw;
+    margin-left:0.2rem;
+    align-content: center;
+  }
+
+  .hero-ofertas {
+    font-size: 4rem;
+    width: 20rem;
+    margin-top: 1rem ;
+    margin-bottom: 15rem;
+    margin-left: -2.5rem;
+  }
+
+  .hero-heading {
+    font-size: 2rem;
+    margin-left: -3.5rem;
+    width: 22rem;
+    
+  }
+
+  .hero-container p {
+    font-size: 1.2rem;
+    margin-left: -2.5rem;
+    width: 22rem;
+    padding: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    .hero-button {
+      position: relative;
+      padding: 0.5rem 1rem;
+      top: -2rem;
+      transform: translateY(-10px);
+      margin: 0 0 0 -1.5rem;
+    }
+  }
+
+}

@@ -1,0 +1,68 @@
+/* Contenedor principal */
+.share-container {
+    max-width: 1700px; /* Limita el ancho máximo en pantallas grandes */
+    min-height: 50vh;
+    margin: 0 auto; /* Centra el contenedor */
+    margin-left: 18vh;
+    padding: 20px;
+    overflow: hidden;
+  }
+  
+  /* Se corrigió la clase para centrado */
+  .share-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Asegura que los elementos se apilen */
+    margin: 0;
+    min-height: 70vh;
+    padding: 10px;
+    border-radius: 15px;
+    
+  }
+  
+  /* Clase container no debe ser un selector combinado con share-text */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+  }
+  
+/* Imágenes del carrusel */
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Cada imagen */
+.carousel-image {
+    flex: 0 0 33.33%; /* Cada imagen ocupa un tercio del carrusel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    aspect-ratio: 16 / 16; /* Proporción 16:9 */
+    overflow: hidden;
+}
+
+/* Estilo de las imágenes */
+.share-container img {
+    width: 70%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 15px;
+   
+}
+
+.h1 {
+    color: #1e3a8a;
+    font-family: "Roboto Flex", sans-serif;
+  }
+ 
+.h2 {
+    color: #9b2226;  /* Color rojo oscuro */
+    font-family: "Pacifico", cursive;  /* Fuente Pacifico */
+  }
+  
+
